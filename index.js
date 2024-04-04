@@ -14,14 +14,16 @@ let brandSwiper = new Swiper('.brands__container', {
 
 const brandsShowAll = document.querySelector('.brands__show-all');
 
-brandsShowAll.addEventListener('click', (e) => {
-    e.preventDefault;
-    const buttonText = document.querySelector('.show-all__text');
-    const brandsWrapper = document.querySelector(".brands__container");
-    buttonText.textContent = buttonText.textContent === 'Показать все' ? 'Скрыть' : 'Показать все';
+brandsShowAll.addEventListener('click', () => {
     buttonText.classList.toggle('rotate180');
     brandsWrapper.classList.toggle('expanded');
-})
+
+    if (buttonText.classList.contains('rotate180')) {
+        buttonText.textContent = 'Скрыть';
+    } else {
+        buttonText.textContent = 'Показать все';
+    }
+});
 
 for (let i = 0; i < activeClasses.length; i++) {
   if (!tablet.matches) {
