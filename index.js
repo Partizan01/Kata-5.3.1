@@ -13,6 +13,8 @@ let brandSwiper = new Swiper('.brands__container', {
 })
 
 const brandsShowAll = document.querySelector('.brands__show-all');
+const buttonText = document.querySelector('.show-all__text');
+const brandsWrapper = document.querySelector(".brands__container");
 
 brandsShowAll.addEventListener('click', () => {
     buttonText.classList.toggle('rotate180');
